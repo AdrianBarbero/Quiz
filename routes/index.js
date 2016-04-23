@@ -8,5 +8,8 @@ router.get('/', function(req, res, next) {
 });
 router.get('/question',quizController.question);
 router.get('/check', quizController.check);
+/*router.get('/question',quizController.question1);
+router.get('/check',quizController.check1);
+*/
 
 module.exports = router;
