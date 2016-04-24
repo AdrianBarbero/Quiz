@@ -34,6 +34,56 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+/*app.get('/questions',function(req,res){
+  res.send('<html><head><title>Quiz</title></head>'
+    +'<body>'
+    +'<form method="get" action="/check">'
+          +'Pregunta : <%= question %> <br>'
+          
+          +'<input type="text" name="answer" value="<%= answer %>"placeholder="Responda aquí" />'
+          +'<input type="hidden" name="parametro" value="Portugal"/>'
+          +'<input type="submit" value="Comprobar">'
+
+            
+
+    +'</form>');
+    +'<form method="get" action="/check">'
+          +'Pregunta : <%= question1 %> <br>'
+          
+          +'<input type="text" name="answer" value="<%= answer %>" placeholder="Responda aquí" />'
+          +'<input type="hidden" name="parametro" value="América"/>'
+          +'<input type="submit" value="Comprobar">'
+
+            
+
+        +'</form>'
+       +'</body>'
+       +'</html>'
+
+});
+app.get('/result',function(req,res){
+  var answer= req.query.answer;
+  var oculto=requ.query.parametro;
+  var result;
+   if(oculto==="América"){
+    answer="Cristobal Colón";
+    if(answer.match(/(Cristobal)? (Col[oó]n)/i) !== null){
+      result="correcta";
+    }else{
+      result="incorrecta";
+    }
+   }else if(hid==="Portugal"){
+    answer="Lisboa";
+    if(answ.match(/lisboa/i)!== null){
+      result="correcta";
+    }else{
+      result="incorrecta";
+    }
+   }
+   if(result==="correcta"){
+    res.send("<html><head><title> Quiz </title></head>");
+   }
+});*/
 
 // error handlers
 
