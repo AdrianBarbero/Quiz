@@ -17,7 +17,7 @@ if(!process.env.DATABASE_URL){
 	url = process.env.DATABASE_URL;
 	storage = process.env.DATABASE_STORAGE || "";
 }
-}
+
 
 //Usar BBDD SQLite:
 var sequelize = new Sequelize(url,{storage: storage, omitNuLl :true});
