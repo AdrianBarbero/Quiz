@@ -36,7 +36,11 @@ exports.question =function(req,res,next){
   */
  
 var models = require('../models');
-
+//GET /quizzes/new
+exports.new =function(req,res,next){
+	var quiz =models.Quiz.build({question:"",answer:""});
+	res.render('quizzes/new',{quiz:quiz});
+};
 //Autoload el quiz asociado a :quizId
 exports.load = function(req,res,next, quizId){
 	models.Quiz.findById(quizId).then(function(quiz){
@@ -81,6 +85,20 @@ throw new Error('No existe ese quiz en la BBDD.');
 }
 }).catch(function(error){next(error);});
 };
+
+
+ //POST/quizzes/create
+ exports.create =function(req,res,next){
+ 	var quiz = models.Quiz.build({ question : req.body.quiz.question,
+ 	                                answer : req.body.quiz.answer});
+
+ 	//guarda en DB los campos pregunta y respuesta de quiz
+ 	quiz.save({fields: ["question", "answer"]}).then(function(quiz){
+ 		res.redirect('/quizzes'); //res.redirect: //Redirección HTTP a lista de preguntas
+ 	}).catch(function(error) {
+          next(error);
+ 	});
+ };
 //GET /quizzes
 /*exports.search=function(res,req,next){
 models.Quiz.findAll({where :["quiz.question like ?", search]}).then(function(quizzes){
