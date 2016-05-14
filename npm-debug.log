@@ -1,0 +1,140 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'sqlite3@3.1.1' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'sqlite3@3.1.1', null ]
+6 verbose cache add name=undefined spec="sqlite3@3.1.1" args=["sqlite3@3.1.1",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'sqlite3@3.1.1',
+7 verbose parsed url   path: 'sqlite3@3.1.1',
+7 verbose parsed url   href: 'sqlite3@3.1.1' }
+8 verbose cache add name="sqlite3" spec="3.1.1" args=["sqlite3","3.1.1"]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: '3.1.1',
+9 verbose parsed url   path: '3.1.1',
+9 verbose parsed url   href: '3.1.1' }
+10 verbose addNamed [ 'sqlite3', '3.1.1' ]
+11 verbose addNamed [ '3.1.1', '3.1.1' ]
+12 silly lockFile 88b438a2-sqlite3-3-1-1 sqlite3@3.1.1
+13 verbose lock sqlite3@3.1.1 /home/rdor/.npm/88b438a2-sqlite3-3-1-1.lock
+14 verbose url raw sqlite3/3.1.1
+15 verbose url resolving [ 'https://registry.npmjs.org/', './sqlite3/3.1.1' ]
+16 verbose url resolved https://registry.npmjs.org/sqlite3/3.1.1
+17 info trying registry request attempt 1 at 13:00:10
+18 verbose etag "6AR25EQBMBG13G2AOUR1OB49"
+19 http GET https://registry.npmjs.org/sqlite3/3.1.1
+20 http 304 https://registry.npmjs.org/sqlite3/3.1.1
+21 silly registry.get cb [ 304,
+21 silly registry.get   { date: 'Sat, 14 May 2016 11:00:13 GMT',
+21 silly registry.get     via: '1.1 varnish',
+21 silly registry.get     'cache-control': 'max-age=300',
+21 silly registry.get     etag: '"6AR25EQBMBG13G2AOUR1OB49"',
+21 silly registry.get     age: '0',
+21 silly registry.get     connection: 'keep-alive',
+21 silly registry.get     'x-served-by': 'cache-ams4134-AMS',
+21 silly registry.get     'x-cache': 'MISS',
+21 silly registry.get     'x-cache-hits': '0',
+21 silly registry.get     'x-timer': 'S1463223613.392552,VS0,VE109',
+21 silly registry.get     vary: 'Accept-Encoding' } ]
+22 verbose etag sqlite3/3.1.1 from cache
+23 silly lockFile 88b438a2-sqlite3-3-1-1 sqlite3@3.1.1
+24 silly lockFile 88b438a2-sqlite3-3-1-1 sqlite3@3.1.1
+25 silly resolved [ { name: 'sqlite3',
+25 silly resolved     description: 'Asynchronous, non-blocking SQLite3 bindings',
+25 silly resolved     version: '3.1.1',
+25 silly resolved     homepage: 'http://github.com/mapbox/node-sqlite3',
+25 silly resolved     author: { name: 'MapBox', url: 'https://mapbox.com/' },
+25 silly resolved     binary:
+25 silly resolved      { module_name: 'node_sqlite3',
+25 silly resolved        module_path: './lib/binding/{node_abi}-{platform}-{arch}',
+25 silly resolved        host: 'https://mapbox-node-binary.s3.amazonaws.com',
+25 silly resolved        remote_path: './{name}/v{version}/{toolset}/',
+25 silly resolved        package_name: '{node_abi}-{platform}-{arch}.tar.gz' },
+25 silly resolved     contributors:
+25 silly resolved      [ [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object],
+25 silly resolved        [Object] ],
+25 silly resolved     repository: { type: 'git', url: 'git://github.com/mapbox/node-sqlite3.git' },
+25 silly resolved     dependencies: { nan: '~2.1.0', 'node-pre-gyp': '~0.6.14' },
+25 silly resolved     devDependencies: { mocha: '~2.3.3', 'aws-sdk': '~2.1.26' },
+25 silly resolved     scripts:
+25 silly resolved      { prepublish: 'npm ls',
+25 silly resolved        install: 'node-pre-gyp install --fallback-to-build',
+25 silly resolved        pretest: 'node test/support/createdb.js',
+25 silly resolved        test: 'mocha -R spec --timeout 480000' },
+25 silly resolved     license: 'BSD-3-Clause',
+25 silly resolved     keywords: [ 'sql', 'sqlite', 'sqlite3', 'database' ],
+25 silly resolved     main: './lib/sqlite3',
+25 silly resolved     readme: 'Asynchronous, non-blocking [SQLite3](http://sqlite.org/) bindings for [Node.js](http://nodejs.org/).\n\n[![NPM](https://nodei.co/npm/sqlite3.png?downloads=true&downloadRank=true)](https://nodei.co/npm/sqlite3/)\n\n[![Build Status](https://travis-ci.org/mapbox/node-sqlite3.svg?branch=master)](https://travis-ci.org/mapbox/node-sqlite3)\n[![Build status](https://ci.appveyor.com/api/projects/status/gvm7ul0hpmdawqom)](https://ci.appveyor.com/project/Mapbox/node-sqlite3)\n[![Coverage Status](https://coveralls.io/repos/mapbox/node-sqlite3/badge.svg?branch=master&service=github)](https://coveralls.io/github/mapbox/node-sqlite3?branch=master)\n[![Dependencies](https://david-dm.org/mapbox/node-sqlite3.svg)](https://david-dm.org/mapbox/node-sqlite3)\n\n\n## Supported platforms\n\nThe `sqlite3` module works with Node.js v0.10.x, v0.12.x, v0.4.x, and v0.5.x.\n\nBinaries for most Node versions and platforms are provided by default via [node-pre-gyp](https://github.com/mapbox/node-pre-gyp).\n\nThe `sqlite3` module also works with [node-webkit](https://github.com/rogerwang/node-webkit) if node-webkit contains a supported version of Node.js engine. [(See below.)](#building-for-node-webkit)\n\nSQLite\'s [SQLCipher extension](https://github.com/sqlcipher/sqlcipher) is also supported. [(See below.)](#building-for-sqlcipher)\n\n# Usage\n\n**Note:** the module must be [installed](#installing) before use.\n\n``` js\nvar sqlite3 = require(\'sqlite3\').verbose();\nvar db = new sqlite3.Database(\':memory:\');\n\ndb.serialize(function() {\n  db.run("CREATE TABLE lorem (info TEXT)");\n\n  var stmt = db.prepare("INSERT INTO lorem VALUES (?)");\n  for (var i = 0; i < 10; i++) {\n      stmt.run("Ipsum " + i);\n  }\n  stmt.finalize();\n\n  db.each("SELECT rowid AS id, info FROM lorem", function(err, row) {\n      console.log(row.id + ": " + row.info);\n  });\n});\n\ndb.close();\n```\n\n# Features\n\n - Straightforward query and parameter binding interface\n - Full Buffer/Blob support\n - Extensive [debugging support](https://github.com/mapbox/node-sqlite3/wiki/Debugging)\n - [Query serialization](https://github.com/mapbox/node-sqlite3/wiki/Control-Flow) API\n - [Extension support](https://github.com/mapbox/node-sqlite3/wiki/Extensions)\n - Big test suite\n - Written in modern C++ and tested for memory leaks\n\n\n# API\n\nSee the [API documentation](https://github.com/mapbox/node-sqlite3/wiki) in the wiki.\n\n\n# Installing\n\nYou can use [`npm`](https://github.com/isaacs/npm) to download and install:\n\n* The latest `sqlite3` package: `npm install sqlite3`\n\n* GitHub\'s `master` branch: `npm install https://github.com/mapbox/node-sqlite3/tarball/master`\n\nIn both cases the module is automatically built with npm\'s internal version of `node-gyp`,\nand thus your system must meet [node-gyp\'s requirements](https://github.com/TooTallNate/node-gyp#installation).\n\nIt is also possible to make your own build of `sqlite3` from its source instead of its npm package ([see below](#building-from-the-source)).\n\nIt is possible to use the installed package in [node-webkit](https://github.com/rogerwang/node-webkit) instead of the vanilla Node.js. See [Building for node-webkit](#building-for-node-webkit) for details.\n\n## Source install\n\nUnless building via `npm install` (which uses its own `node-gyp`) you will need `node-gyp` installed globally:\n\n    npm install node-gyp -g\n\nThe sqlite3 module depends only on libsqlite3. However, by default, an internal/bundled copy of sqlite will be built and statically linked, so an externally installed sqlite3 is not required.\n\nIf you wish to install against an external sqlite then you need to pass the `--sqlite` argument to `node-gyp`, `npm install` or the `configure` wrapper.\n\n    ./configure --sqlite=/usr/local\n    make\n\nOr, using the node-gyp directly:\n\n     node-gyp --sqlite=/usr/local\n     make\n\nOr, using npm:\n\n     npm install --sqlite=/usr/local\n\nIf building against an external sqlite3 make sure to have the development headers available. Mac OS X ships with these by default. If you don\'t have them installed, install the `-dev` package with your package manager, e.g. `apt-get install libsqlite3-dev` for Debian/Ubuntu. Make sure that you have at least `libsqlite3` >= 3.6.\n\nNote, if building against homebrew-installed sqlite on OS X you can do:\n\n    ./configure --sqlite=/usr/local/opt/sqlite/\n    make\n\n## Building for node-webkit\n\nBecause of ABI differences, `sqlite3` must be built in a custom to be used with [node-webkit](https://github.com/rogerwang/node-webkit).\n\nTo build node-sqlite3 for node-webkit:\n\n1. Install [`nw-gyp`](https://github.com/rogerwang/nw-gyp) globally: `npm install nw-gyp -g` *(unless already installed)*\n\n2. Build the module with the custom flags of `--runtime`, `--target_arch`, and `--target`:\n\n```sh\nNODE_WEBKIT_VERSION="0.8.6" # see latest version at https://github.com/rogerwang/node-webkit#downloads\nnpm install sqlite3 --build-from-source --runtime=node-webkit --target_arch=ia32 --target=$(NODE_WEBKIT_VERSION)\n```\n\nThis command internally calls out to [`node-pre-gyp`](https://github.com/mapbox/node-pre-gyp) which itself calls out to [`nw-gyp`](https://github.com/rogerwang/nw-gyp) when the `--runtime=node-webkit` option is passed.\n\nYou can also run this command from within a `node-sqlite3` checkout:\n\n```sh\nnpm install --build-from-source --runtime=node-webkit --target_arch=ia32 --target=$(NODE_WEBKIT_VERSION)\n```\n\nRemember the following:\n\n* You must provide the right `--target_arch` flag. `ia32` is needed to target 32bit node-webkit builds, while `x64` will target 64bit node-webkit builds (if available for your platform).\n\n* After the `sqlite3` package is built for node-webkit it cannot run in the vanilla Node.js (and vice versa).\n   * For example, `npm test` of the node-webkit\'s package would fail.\n\nVisit the “[Using Node modules](https://github.com/rogerwang/node-webkit/wiki/Using-Node-modules)” article in the node-webkit\'s wiki for more details.\n\n## Building for sqlcipher\n\nFor instructions for building sqlcipher see\n[Building SQLCipher for node.js](https://coolaj86.com/articles/building-sqlcipher-for-node-js-on-raspberry-pi-2/)\n\nTo run node-sqlite3 against sqlcipher you need to compile from source by passing build options like:\n\n    npm install sqlite3 --build-from-source --sqlite_libname=sqlcipher --sqlite=/usr/\n    \n    node -e \'require("sqlite3")\'\n\nIf your sqlcipher is installed in a custom location (if you compiled and installed it yourself),\nyou\'ll also need to to set some environment variables:\n\n### On OS X with Homebrew\n\nSet the location where `brew` installed it:\n\n    export LDFLAGS="-L`brew --prefix`/opt/sqlcipher/lib"\n    export CPPFLAGS="-I`brew --prefix`/opt/sqlcipher/include"\n    npm install sqlite3 --build-from-source --sqlite_libname=sqlcipher --sqlite=`brew --prefix`\n    \n    node -e \'require("sqlite3")\'\n\n### On most Linuxes (including Raspberry Pi)\n\nSet the location where `make` installed it:\n\n    export LDFLAGS="-L/usr/local/lib"\n    export CPPFLAGS="-I/usr/local/include -I/usr/local/include/sqlcipher"\n    export CXXFLAGS="$CPPFLAGS"\n    npm install sqlite3 --build-from-source --sqlite_libname=sqlcipher --sqlite=/usr/local --verbose\n    \n    node -e \'require("sqlite3")\'\n\n# Testing\n\n[mocha](https://github.com/visionmedia/mocha) is required to run unit tests.\n\nIn sqlite3\'s directory (where its `package.json` resides) run the following:\n\n    npm install mocha\n    npm test\n\n\n# Contributors\n\n* [Konstantin Käfer](https://github.com/kkaefer)\n* [Dane Springmeyer](https://github.com/springmeyer)\n* [Will White](https://github.com/willwhite)\n* [Orlando Vazquez](https://github.com/orlandov)\n* [Artem Kustikov](https://github.com/artiz)\n* [Eric Fredricksen](https://github.com/grumdrig)\n* [John Wright](https://github.com/mrjjwright)\n* [Ryan Dahl](https://github.com/ry)\n* [Tom MacWright](https://github.com/tmcw)\n* [Carter Thaxton](https://github.com/carter-thaxton)\n* [Audrius Kažukauskas](https://github.com/audriusk)\n* [Johannes Schauer](https://github.com/pyneo)\n* [Mithgol](https://github.com/Mithgol)\n\n\n# Acknowledgments\n\nThanks to [Orlando Vazquez](https://github.com/orlandov),\n[Eric Fredricksen](https://github.com/grumdrig) and\n[Ryan Dahl](https://github.com/ry) for their SQLite bindings for node, and to mraleph on Freenode\'s #v8 for answering questions.\n\nDevelopment of this module is sponsored by [MapBox](http://mapbox.org/).\n\n\n# License\n\n`node-sqlite3` is [BSD licensed](https://github.com/mapbox/node-sqlite3/raw/master/LICENSE).\n',
+25 silly resolved     readmeFilename: 'README.md',
+25 silly resolved     bugs: { url: 'https://github.com/mapbox/node-sqlite3/issues' },
+25 silly resolved     bundleDependencies: [ 'node-pre-gyp' ],
+25 silly resolved     _id: 'sqlite3@3.1.1',
+25 silly resolved     _from: 'sqlite3@3.1.1' } ]
+26 info install sqlite3@3.1.1 into /home/rdor/mis_proyectos/quiz
+27 info installOne sqlite3@3.1.1
+28 info /home/rdor/mis_proyectos/quiz/node_modules/sqlite3 unbuild
+29 info preuninstall sqlite3@3.1.1
+30 info uninstall sqlite3@3.1.1
+31 verbose true,/home/rdor/mis_proyectos/quiz/node_modules,/home/rdor/mis_proyectos/quiz/node_modules unbuild sqlite3@3.1.1
+32 info postuninstall sqlite3@3.1.1
+33 info /home/rdor/mis_proyectos/quiz/node_modules/sqlite3 unbuild
+34 info preuninstall sqlite3@3.1.1
+35 info uninstall sqlite3@3.1.1
+36 verbose true,/home/rdor/mis_proyectos/quiz/node_modules,/home/rdor/mis_proyectos/quiz/node_modules unbuild sqlite3@3.1.1
+37 info postuninstall sqlite3@3.1.1
+38 error error rolling back Error: EACCES, unlink '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md'
+38 error error rolling back  sqlite3@3.1.1 { [Error: EACCES, unlink '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md']
+38 error error rolling back   errno: 3,
+38 error error rolling back   code: 'EACCES',
+38 error error rolling back   path: '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md' }
+39 error Error: EACCES, unlink '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md'
+39 error  { [Error: EACCES, unlink '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md']
+39 error   errno: 3,
+39 error   code: 'EACCES',
+39 error   path: '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md' }
+40 error Please try running this command again as root/Administrator.
+41 error System Linux 3.13.0-40-generic
+42 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "--save" "sqlite3@3.1.1"
+43 error cwd /home/rdor/mis_proyectos/quiz
+44 error node -v v0.10.25
+45 error npm -v 1.3.10
+46 error path /home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md
+47 error code EACCES
+48 error errno 3
+49 error stack Error: EACCES, unlink '/home/rdor/mis_proyectos/quiz/node_modules/sqlite3/CHANGELOG.md'
+50 verbose exit [ 3, true ]
