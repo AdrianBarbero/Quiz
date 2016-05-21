@@ -25,19 +25,12 @@ var sequelize = new Sequelize(url,{storage: storage, omitNuLl :true});
 //Importar la definición de la tabla Quiz de quiz.js
 var Quiz =sequelize.import(path.join(__dirname,'quiz'));
 
-// sequelize.sync() crea e inicializa tabla de preguntas en DB
- sequelize.sync().then(function(){
-	return Quiz.count().then(function(c){
-		if(c===0){ // la tabla se inicializa si está vacía
-           return Quiz.bulkCreate([ {question :'Capital de Portugal', answer:'Lisboa' },
-           	{question: 'Quién descubrió América', answer: 'Cristobal Colón'}]).then(function(){
-            	console.log('Base de datos inicializada con datos');
-            });
-		}
-	});
-}).catch(function(error){
-	console.log("Error sincronizando las tablas de la BBDD:", error);
-  process.exit(1);
-});
+//Importar la definición de la tabla Comments de comment.js
+var Comment = sequelize.import(path.join(__dirname,'comment'));
+
+//Relaciones entre modelos
+Comment.belongsTO(Quiz);
+Quiz.hasMany(Comment);
+
 exports.Quiz= Quiz; //exportar definición de tabla Quiz
-//Eliminar cuestionario de question1.
+exports.Comment =Comment; // exportar definición de tabla Comments
