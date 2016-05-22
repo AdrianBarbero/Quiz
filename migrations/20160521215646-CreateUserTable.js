@@ -7,7 +7,7 @@ module.exports = {
                   allowNull: false,
                   primaryKey: true,
                   autoIncrement: true,
-                  unique: true },
+                  unique: true }, 
             username :{ type: Sequelize.STRING,
                         unique: true,
                         validate: {
