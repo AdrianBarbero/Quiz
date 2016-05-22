@@ -20,7 +20,9 @@ if(!process.env.DATABASE_URL){
 
 
 //Usar BBDD SQLite:
-var sequelize = new Sequelize(url,{storage: storage, omitNuLl :true});
+var sequelize = new Sequelize(url,
+	                           {storage: storage,
+	                            omitNull :true});
 
 //Importar la definición de la tabla Quiz de quiz.js
 var Quiz =sequelize.import(path.join(__dirname,'quiz'));
