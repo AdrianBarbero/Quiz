@@ -8,7 +8,7 @@ var Sequelize = require('sequelize');
 // DATABASE_STORAGE =quiz.sqlite
 //Usar BBDD Postgres:
 // DATABASE_URL =postgres://user:passwd@host:port/database
-var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)\:(.*)\/(.*)/);
+var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DATABASE_PROTOCOL = url[1];
 var DATABASE_DIALECT  = url[1];
 var DATABASE_USER     = url[2];
