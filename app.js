@@ -20,12 +20,24 @@ app.set('view engine', 'ejs');
 app.use(partials());
 app.use(flash());
 
-// uncomment after placing your favicon in /public
+
+app.use(session({secret:"Quiz 2016",
+                 resave: false,
+                 saveUninitialized: true}));
 app.use(methodOverride('_method',{methods: ["POST","GET"]}));
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//Helper dinámico:
+app.use(function(req, res, next){
+
+  //Hacer visible req.session en las vistas
+  res.locals.session = req.session;
+
+  next();
+});
 
 app.use(cookieParser());
 app.use(session({ secret: "Quiz 2016",
