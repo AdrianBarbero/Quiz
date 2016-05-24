@@ -3,7 +3,8 @@
 	<% for (var i in users){ %>
 	<tr>
 	  <td>
-		<a href="/users/<%=users[i].id %>"><%=quizzes[i].id%> </a>
+		<a href="/users/<%=users[i].id %>"><%=users[i].username%> </a>
+		<%= users[i].isAdmin ? "(admin)" : "" %>
 	  </td>
 	  <td>
 	  	<a href="/users/<%= users[i].id %>/edit"><button> editar</button></a>

@@ -19,7 +19,7 @@ router.param('userId', userController.load); // autoload :userId
 
 //Definición de rutas de cuenta
 router.get('/users',      userController.index); // listado de ususarios
-router.get('/users/:userId(\\d+',    userController.show); // ver un usuario
+router.get('/users/:userId(\\d+)',    userController.show); // ver un usuario
 router.get('/users/new',       userController.new); // formulario sign
 router.post('/users',    userController.create); //registrar usuario
 router.get('/users/:userId(\\d+)/edit', userController.edit); //editar cuenta

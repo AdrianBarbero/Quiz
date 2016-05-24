@@ -34,5 +34,5 @@ module.exports = function(sequelize, DataTypes) {
 * y devuelve 40 caracteres hexadecimales.
 */
 function encryptPassword(password, salt) {
-	return crypto.creteHmac('sha1',salt).update(password).digest('hex');
+	return crypto.createHmac('sha1',salt).update(password).digest('hex');
 };

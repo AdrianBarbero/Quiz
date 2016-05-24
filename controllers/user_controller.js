@@ -17,7 +17,7 @@ exports.load = function(req, res, next, userId) {
 //GET /users
 
 exports.index = function(req, res, next) {
-	models.USer.findAll({order: ['username']}).then(function(users) {
+	models.User.findAll({order: ['username']}).then(function(users) {
 		res.render('users/index', { users: users});
 	}).catch(function(error) { next(error); });
 };
@@ -39,7 +39,7 @@ exports.new = function(req, res, next) {
 // POST /users
 exports.create = function(req, res, next) {
 	var user = models.User.build({ username: req.body.user.username,
-	                               password: req-body.user.password
+	                               password: req.body.user.password
 	                           });
 	//El login debe ser único:
 	models.User.find({where: {username: req.body.user.username}}).then(function(existing_user) {
