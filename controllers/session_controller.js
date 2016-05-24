@@ -1,3 +1,6 @@
+var models = require('../models');
+var Sequelize = require('sequelize');
+
 /*Auteticar un usuario si usuario esta en tabla users
  *
  *Devuelve Promesa: busca usuario con login y password.
@@ -26,7 +29,7 @@
  	var login    = req.body.login;
  	var password = req.body.password;
 
- 	authenticate(login,password).then(function(user) {
+ 	authenticate(login, password).then(function(user) {
  		if(user) {
  			//Crear req.session.user y guardar campos id y username
  			//La sesión se define por la existencia de: req.session.user

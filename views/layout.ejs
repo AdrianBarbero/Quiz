@@ -20,7 +20,7 @@
   	<% if(!session.user) { %>
   	    <a href="/users/new">Registarse</a>
   	    <a href="/session">Login</a>
-  	>% } else { %>
+  	<% } else { %>
         <%= session.user.username %>
         <a href="/users/<%= session.user.id %>">Perfil</a>
         <a href="/session?_method=DELETE">Logout</a>
