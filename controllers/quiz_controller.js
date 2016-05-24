@@ -1,39 +1,4 @@
-// GET /question
-/*
-exports.question =function(req,res,next){
-	var answer =req.query.answer || '';
-	var par =req.query.parametro || '';
-	
-	res.render('quizzes/question',{question:'Capital de Portugal',answer: answer,question1:'Quién descubrió América'});
-	
-};
 
-
-
-// GET /check
-  exports.check = function(req,res,next){
-
-  	var answer= req.query.answer ||"";
-  	var par =req.query.parametro || "";
-  	
-
-
-  	
-    if((par==="Portugal")&&(answer==="Lisboa")){
-
-    result='Correcta';
-  	res.render('quizzes/result',{result:result, answer: answer});
-  }else if((par==="América")&&(answer==="Cristobal Colón" || answer==="Colón")){
-  	result='Correcta';
-    res.render('quizzes/result',{result:result, answer: answer});
-  }
-  else{
-  	result='Incorrecta'
-  	res.render('quizzes/result',{result:result, answer: answer});
-  }
-    
-  };
-  */
  
 var models = require('../models');
 var Sequelize = require('sequelize');
@@ -90,11 +55,15 @@ throw new Error('No existe ese quiz en la BBDD.');
 
  //POST/quizzes/create
  exports.create =function(req,res,next){
+
+ 	var authorId = req.session.user && req.session.user.id || 0;
+
  	var quiz = models.Quiz.build({ question : req.body.quiz.question,
- 	                                answer : req.body.quiz.answer});
+ 	                                answer : req.body.quiz.answer,
+ 	                                AuthorId: authorId});
 
  	//guarda en DB los campos pregunta y respuesta de quiz
- 	quiz.save({fields: ["question", "answer"]}).then(function(quiz){
+ 	quiz.save({fields: ["question", "answer", "AuthorId"]}).then(function(quiz){
  		req.flash('success','Quiz creado con éxito.');
  		res.redirect('/quizzes'); //res.redirect: //Redirección HTTP a lista de preguntas
  	}).catch(Sequelize.ValidationError, function(error){
