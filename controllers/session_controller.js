@@ -18,6 +18,13 @@ var Sequelize = require('sequelize');
  	});
  };
 
+exports.loginRequired = function(req, res, next) {
+	if(req.session.user){
+		next();
+	}else{
+		res.redirect('/session?redir=' + (req.param('redir') || req.url));
+	}
+}
  // GET /session  --Formulario de login
  exports.new = function(req, res, next){
  	res.render('session/new');
@@ -45,6 +52,7 @@ var Sequelize = require('sequelize');
  		next(error);
  	   });
  	 };
+
 
 // DELETE / session   --Destruir sesion
 exports.destroy = function(req, res, next) {
