@@ -17,7 +17,7 @@ router.get('/author',function(req,res,next){
 // Autoload de rutas que usen quizId
 router.param('quizId', quizController.load); // autoload :quizId
 router.param('userId', userController.load); // autoload :userId
-router.param('commentId', comment_controller); // autoload :commentId
+router.param('commentId', commentController.load); // autoload :commentId
 //Definición de rutas de sesion
 router.get('/session',   sessionController.new); //formulario login
 router.post('/session', sessionController.create); //crear sesion
