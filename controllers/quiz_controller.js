@@ -116,11 +116,17 @@ throw new Error('No existe ese quiz en la BBDD.');
  		next(error);
  	});
  };
-//GET /quizzes
-/*exports.search=function(res,req,next){
-models.Quiz.findAll({where :["quiz.question like ?", search]}).then(function(quizzes){
-var search = req.query.search || "";
-res.render('/quizzes',{search :search});
-res.render('/quizzes/search',{pregunta : quiz.question});
-}).catch(function(error){next(error);});
-}*/
+
+ exports.ownershipRequired=function(req, res, next){
+     
+     var isAdmin = req.session.user.isAdmin;
+     var quizAuthorId = req.quiz.AuthorId;
+     var loggedUserId = req.session.user.id;
+
+     if(isAdmin || quizAuthorId === loggedUserId){
+     	next();
+     }else{
+     	console.log('Operación prohibida: El usuario logueado no es el autro del quiz, ni un administrador.');
+     	res.send(403);
+       }
+      };
